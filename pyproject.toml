@@ -9,11 +9,21 @@ dependencies = [
     "fastapi[standard-no-fastapi-cloud-cli]>=0.119.1",
 ]
 
+[tool.pyrefly]
+project-includes = ["**/*.py*"]
+project-excludes = [
+    "**/node_modules",
+    "**/__pycache__",
+    "**/*venv/**/*",
+    "**/.[!/.]*/**/*",
+]
+
 [[tool.uv.index]]
 url="https://pypi.tuna.tsinghua.edu.cn/simple"
 default=true
 
 [dependency-groups]
 dev = [
+    "pyrefly>=0.38.2",
     "ruff>=0.14.1",
 ]
