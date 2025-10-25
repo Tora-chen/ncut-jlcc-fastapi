@@ -3,10 +3,10 @@ name = "ncut-jlcc-fastapi"
 version = "0.1.1"
 description = "日语社网站后端服务"
 readme = "README.md"
-requires-python = ">=3.12"
+requires-python = "~=3.12.0"
 dependencies = [
-    "authing>=5.1.0",
-    "fastapi[standard-no-fastapi-cloud-cli]>=0.119.1",
+    "authing~=5.1.0",
+    "fastapi[standard-no-fastapi-cloud-cli]~=0.119.1",
 ]
 
 [tool.pyrefly]
