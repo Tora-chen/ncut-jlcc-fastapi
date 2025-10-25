@@ -1,8 +1,8 @@
-import uvicorn, os
+import uvicorn
 from fastapi import FastAPI
 from fastapi.responses import RedirectResponse
 
-from src.authing_cli import authentication_client
+from authing_cli import authentication_client
 
 app = FastAPI()
 
@@ -15,7 +15,7 @@ def read_root():
 @app.get("/key")
 async def get_current_user(code: str):
     authentication_client.get_access_token_by_code(code)
-    
+
     try:
         with open("./BOX_KEY/KEY", "r") as f:
             key = f.read()

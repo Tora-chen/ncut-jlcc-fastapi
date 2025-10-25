@@ -4,12 +4,12 @@
 ## 容器部署：
 构建镜像：
 ```
-podman compose build
+docker compose build
 ```
 
 运行：
 ```
-podman compose up -d
+docker compose up -d
 ```
 
 ## 源代码部署：

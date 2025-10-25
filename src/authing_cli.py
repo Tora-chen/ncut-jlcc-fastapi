@@ -1,4 +1,3 @@
-import os
 from authing import AuthenticationClient
 
 # 初始化 AuthenticationClient
@@ -12,4 +11,3 @@ authentication_client = AuthenticationClient(
     # Authing 应用配置的登录回调地址
     redirect_uri="http_",
 )
-
