@@ -10,4 +10,4 @@ wheels/
 .venv
 .env
 
-BOX_KEY/KEY
+/ENV
