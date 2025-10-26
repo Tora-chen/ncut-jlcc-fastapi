@@ -1,3 +1,5 @@
+编写docker-compose.yml文件：
+```yaml
 services:
   ncut-jlcc-fastapi:
     # 构建镜像
@@ -7,13 +9,27 @@ services:
 
     image: ncut-jlcc-fastapi:0.1.1
 
+    environment:
+      - AUTHING_CLIENT_SECRET=xxxxxxx
+
     ports:
       - "8910:8910"
 
     volumes:
-      - ./BOX_KEY:/app/BOX_KEY
+      - ./ENV/:/app/ENV/
 
     container_name: ncut-jlcc-fastapi
 
     # 容器在退出或服务器重启时自动重启
     restart: unless-stopped
+```
+
+构建镜像：
+```
+docker compose build
+```
+
+运行：
+```
+docker compose up -d
+```
